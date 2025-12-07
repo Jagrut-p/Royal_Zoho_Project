@@ -1,0 +1,139 @@
+The horizontal (left-right) scroll bar is appearing because the **total width of the content** within your `<body>` is **exceeding the width of the viewport** (the visible screen area of the browser).
+
+This is primarily due to a few specific CSS properties you've used that position elements far to the right, causing them to spill over the edge of the screen:
+
+## 🔍 Key Scroll-Causing Elements and CSS
+
+The main culprits are elements that use **absolute or relative positioning** combined with a large `left` value, or elements that have a fixed large width and are positioned in a way that doesn't account for margins or the viewport edge.
+
+  * **1. The `.flexbox` container (Relative Width and Positioning):**
+
+      * ```css
+          .flexbox {
+              /* ... other styles */
+              height: 1000px;
+              width: 100%; /* Takes 100% of the body/viewport width */
+              padding-top: 80px;
+          }
+        ```
+      * While `width: 100%` seems fine, its children are using large `left` offsets, which push the container's *content* beyond its right edge, and thus beyond the viewport.
+
+  * **2. The `.crm` (Customer Relationship Management) div:**
+
+      * ```css
+          .crm {
+              /* ... other styles */
+              position: relative;
+              **left: 21%;** /* Pushes the element 21% from the left edge of its parent (.flexbox) */
+              width: 30%; /* The element itself is 30% wide */
+              /* ... other styles */
+          }
+        ```
+      * Since `.flexbox` is `100%` wide, `.crm` starts at the $21\%$ mark and extends for another $30\%$. Its right edge is at $21\% + 30\% = 51\%$ of the viewport. This element itself isn't the primary problem, but its children's positioning contributes to the overall content width.
+
+  * **3. The `.bigimg` (Large Image Background) div:**
+
+      * ```css
+          .bigimg {
+              /* ... other styles */
+              height: 300px;
+              max-width: 100%;
+              width: 100%;
+              position: absolute; /* Takes it out of the normal flow */
+              background-size: 80%;
+              background-repeat: no-repeat;
+              /* ... other styles */
+              **top: 530px;**
+              **right: 18%;** /* This positions the right edge 18% from the viewport's right edge. */
+          }
+        ```
+      * This element has `width: 100%` and is positioned `right: 18%` *absolutely* relative to the viewport. A $100\%$ width element cannot start $18\%$ from the right and still fit; its $100\%$ width, plus the $18\%$ offset, will exceed the screen width by $18\%$, forcing the scroll bar.
+
+  * **4. The `.right1` Navigation Bar elements:**
+
+      * ```css
+          .right1 {
+              /* ... other styles */
+              position: relative;
+              **left: 80%;** /* Pushes the entire block 80% from the left */
+              width: 15%; /* The block itself is 15% wide */
+              /* ... other styles */
+          }
+        ```
+      * The element starts at $80\%$ and is $15\%$ wide, meaning its right edge is at $80\% + 15\% = 95\%$. This is usually fine, but when combined with the large `left` margins on the main text sections (like `.te`, `.sp`), they can create a collective width overflow.
+
+## ✅ How to Fix It
+
+The best way to fix this is to use **Flexbox** or **Grid** to properly align and space your elements, especially the navigation bar and the main content section, rather than relying on absolute positioning with large `left` or `right` values.
+
+### 1\. Fix the `mai` (Header) and `right1`
+
+Instead of pushing `.right1` with `left: 80%`, align its parent's content using Flexbox properties:
+
+  * **Change `mai`:** Make its children justify their space.
+    ```css
+    .mai {
+        /* ... existing styles ... */
+        display: flex; /* Make it a flex container */
+        justify-content: space-between; /* Space out the logo/nav (flexe1) and the sign-in block (right1) */
+        align-items: center;
+        padding: 0 5%; /* Add padding to keep content off the edges */
+    }
+
+    .flexe1 {
+        /* Remove or reduce any large left/right positioning on children */
+        top: 0; /* Remove top offset */
+        left: 0; /* Remove left offset */
+    }
+
+    .right1 {
+        /* ... existing styles ... */
+        position: static; /* Remove relative positioning */
+        left: auto; /* Remove left offset */
+        bottom: auto; /* Remove bottom offset */
+        border: none; /* Remove border */
+        width: auto; /* Let content dictate width */
+    }
+    ```
+
+### 2\. Fix the `.bigimg`
+
+Since it has `width: 100%` and `right: 18%`, it's guaranteed to overflow. Change its width or positioning.
+
+**Option A (Recommended for absolute image):** Set `width` so it doesn't overlap the right offset.
+
+```css
+.bigimg {
+    /* ... existing styles ... */
+    position: absolute;
+    width: 82%; /* 100% - 18% offset = 82% */
+    right: 18%;
+    /* top, background-size, etc. */
+}
+```
+
+**Option B (Better for responsive design):** Use the `max-width` property and remove the explicit `width: 100%` and `right: 18%` from the container. Let the flex container manage it.
+
+### 3\. Review all elements with large `left` properties (e.g., `.te`, `.sp`, `.fonr`, `.one`, `.fo`):
+
+These all use a large `left` property (e.g., `left: 10%`, `left: 180px`, `left: 20%`) without adjusting their width, which pushes them to the right and often causes the scroll bar. Use **`margin-left`** instead, or apply **`padding`** to their parent container (`.flexbox`, `.yellow`) to indent the content without causing overflow.
+
+```css
+/* Change this: */
+.te {
+    /* ... */
+    position: relative;
+    left: 10%; /* Bad practice for indentation */
+    /* ... */
+}
+
+/* To this: */
+.te {
+    /* ... */
+    position: static; /* Remove positioning */
+    margin-left: 10%; /* Use margin for indentation */
+    /* ... */
+}
+```
+
+Would you like me to focus on one of these sections, like the header or the main content layout, and provide the updated, corrected CSS code?

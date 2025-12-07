@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .meesho {
+        background-image: url(./meesho.svg);
+        background-size: 150px;
+        height: 150px;
+        width: 150px;
+        background-repeat: no-repeat;
+    }
+
+    .gep {
+        background-image: url(./gep.svg);
+        background-size: 150px;
+        height: 150px;
+        width: 150px;
+        background-repeat: no-repeat;
+    }
+
+    .aparajitha {
+        background-image: url(./aparajitha.png);
+        background-size: 150px;
+        height: 150px;
+        width: 150px;
+        background-repeat: no-repeat;
+    }
+
+    .spicejet {
+        background-image: url(./spicejet.svg);
+        background-size: 150px;
+        height: 150px;
+        width: 150px;
+        background-repeat: no-repeat;
+    }
+
+    .zomato {
+        background-image: url(./zomato.png);
+        background-size: 150px;
+        height: 150px;
+        width: 150px;
+        background-repeat: no-repeat;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid silver;
+        height: 70px;
+    }
+
+    .cir {
+        background-image: url(./zlogo.svg);
+        width: 300px;
+        height: 50px;
+        background-size: 100%;
+        position: relative;
+        left: 15px;
+        top: 10px;
+        background-repeat: no-repeat;
+    }
+
+    .work {
+        position: relative;
+        right: 200px;
+        align-self: center;
+        font-family: sans-serif;
+        font-weight: 500;
+        line-height: 26px;
+        font-size: 17px;
+        left: 30px;
+        width: 100px;
+    }
+
+    .sign1 {
+        align-self: center;
+        font-family: sans-serif;
+        color: red;
+        position: relative;
+        left: 250px;
+    }
+
+    .nav2 {
+        display: flex;
+    }
+
+    .log2 {
+            background-image: url(./people.svg);
+        background-repeat: no-repeat;
+        background-size: 120px;
+        width: 160px;
+        height: 50px;
+        position: relative;
+        left: 65px;
+        align-self: center;
+    }
+
+    .work1 {
+        align-self: center;
+        position: relative;
+        left: 420px;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    .nav2 {
+        gap: 4%;
+        background-color: white;
+        height: 60px;
+    }
+
+    .vidbox {
+        border: 1px solid rgb(238, 238, 238);
+        width: 550px;
+        border-radius: 5px;
+        height: 77px;
+        position: relative;
+        left: 400px;
+        top: 75px;
+    }
+
+    .vidtext {
+        position: relative;
+        bottom: 50px;
+        left: 175px;
+        font-family: semi;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .play {
+        position: relative;
+        left: 430px;
+        bottom: 76px;
+        border: 1px solid rgb(242, 243, 255);
+        background-color: rgb(242, 243, 255);
+        width: 90px;
+        height: 20px;
+        text-align: center;
+        padding: 6px;
+        border-radius: 5px;
+        font-family: Zoho_Puvi_SemiBold, sans-serif;
+        font-weight: 700;
+        color: rgb(11, 76, 239);
+    }
+
+    .hrsoft {
+        position: relative;
+        left: 450px;
+        top: 90px;
+        align-self: center;
+        width: 550px;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 70px;
+    }
+
+    .stream {
+        font-weight: 600;
+        font-size: 16px;
+        position: relative;
+        top: 110px;
+        left: 400px;
+        text-align: center;
+        width: 600px;
+    }
+
+    .trial {
+        border: 1px solid rgb(3, 69, 255);
+        background-color: rgb(3, 69, 255);
+        width: 230px;
+        height: 50px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        align-content: center;
+        position: relative;
+        left: 460px;
+        top: 140px;
+        border-radius: 4px;
+    }
+
+    .demo {
+        border: 1px solid black;
+        background-color: white;
+        height: 50px;
+        text-align: center;
+        align-content: center;
+        width: 185px;
+        position: relative;
+        left: 705px;
+        top: 88px;
+        border-radius: 4px;
+    }
+
+    .trial:hover {
+        background-color: rgb(2, 52, 190);
+    }
+
+    .demo:hover {
+        background-color: black;
+        color: white;
+        transition: 0.7;
+    }
+
+    .ground {
+        background-image: url(./unnamed.jpg);
+        background-size: 1690px;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 1400px;
+    }
+
+    .companies {
+        position: relative;
+        top: 130px;
+        padding-left: 280px;
+        display: flex;
+        gap: 4%;
+    }
+
+    .white {
+        width: 82.5%;
+        height: 580px;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        position: relative;
+        bottom: 730px;
+        left: 8.2%;
+        font-size: 16px;
+        border: 1px solid black;
+    }
+
+    .image1 {
+        background-image: url(./image1.png);
+        background-repeat: no-repeat;
+        background-size: 565px;
+        height: 570px;
+        width: 570px;
+        align-self: center;
+        position: relative;
+        left: 5px;
+    }
+
+    .hiring {
+        border: 1px solid black;
+        position: relative;
+        bottom: 770px;
+        right: 210px;
+        width: 530px;
+    }
+
+    .text {
+        width: 40%;
+        height: 55%;
+        position: relative;
+        left: 4%;
+        top: 5%;
+    }
+
+    .text1 {
+        font-size: 48px;
+        font-weight: 600;
+        position: relative;
+        top: 20px;
+        width: 70%;
+        left: 20px;
+    }
+
+    .text2 {
+        font-size: 16px;
+        font-weight: 600;
+        position: relative;
+        top: 30px;
+        left: 30px;
+        width: 100%;
+    }
+
+    .ehir {
+        border: 1px solid rgb(3, 69, 255);
+        color: rgb(3, 69, 255);
+        position: relative;
+        top: 50px;
+        left: 30px;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        align-content: center;
+    }
+
+    .onboarding {
+        border: 1px solid rgb(3, 69, 255);
+        color: rgb(3, 69, 255);
+        position: relative;
+        top: 9px;
+        left: 220px;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        align-content: center;
+    }
+
+    .fir {
+        display: flex;
+        flex-direction: row;
+        gap: 20%;
+    }
+
+    .pols {
+        position: relative;
+    }
+
+    .wh {
+        position: relative;
+        top: 50%;
+        width: 100%;
+    }
+
+    .sec {
+        display: flex;
+        gap: 12.5%;
+    }
+
+    .secondbox {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+        width: 82.5%;
+        height: 570px;
+        position: relative;
+        bottom: 700px;
+        left: 8.2%;
+    }
+
+    .exbutton {
+        border: 2px solid rgb(12, 77, 255);
+        color: rgb(12, 77, 255);
+        font-weight: bold;
+        width: 30%;
+        height: 40px;
+        text-align: center;
+        align-content: center;
+    }
+
+    .core {
+        font-size: 48px;
+        width: 45%;
+        font-weight: bold1;
+    }
+
+    .boost {
+        font-size: 16px;
+        width: 80%;
+        font-weight: 600;
+    }
+
+    .posi {
+        position: relative;
+        top: 8%;
+        left: 7%;
+    }
+
+    .img3 {
+        background-image: url(./thirdimg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 558px;
+        background-color: white;
+        width: 120%;
+    }
+    .do{
+        display: flex;
+        gap: 5%;
+        position: relative;
+        top: 35%;
+        left: 8%;
+        font-size: 16px;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <a href="index.html">
+            <div class="cir work"></div>
+        </a>
+        <div class="pay work">Payroll</div>
+        <div class="rec work">Recruit</div>
+        <div class="exp work">Expenses</div>
+        <div class="mail work">Mail</div>
+        <div class="cli1 work">Cliq</div>
+        <div class="sign work">Sign</div>
+        <div class="allpro work">All Products</div>
+        <div class="sign1">Sign In</div>
+    </div>
+    <div class="nav2">
+        <div class="log2"></div>
+        <div class="feat work1">Features</div>
+        <div class="sol work1">Solutions</div>
+        <div class="price work1">Pricing</div>
+        <div class="cus work1">Customers</div>
+        <div class="part work1">Partners</div>
+        <div class="res work1">Resources</div>
+    </div>
+    <div class="ground">
+        <div class="vidbox">
+            <div class="vid"><video style="border-radius: 5px;" height="75px" controls
+                    src="./zpl-unburden-hr.mp4"></video></div>
+            <div class="vidtext">Unburden your HR team</div>
+            <div class="play">Play video</div>
+        </div>
+        <div class="hrsoft">HR software for every business</div>
+        <div class="stream">Streamline all your HR processes and deliver exceptional employee experiences with Zoho
+            People—cloud-based HR software that's intuitive, agile, mobile-friendly.</div>
+        <div class="trial">Sign Up for free trial</div>
+        <div class="demo">Request Demo</div>
+        <div class="companies">
+            <div class="meesho"></div>
+            <div class="gep"></div>
+            <div class="aparajitha"></div>
+            <div class="spicejet"></div>
+            <div class="zomato"></div>
+        </div>
+    </div>
+    <div class="white">
+        <div class="image1"></div>
+        <div class="text">
+            <div class="text1 pols">Hiring and onboarding</div>
+            <div class="text2 pols">Great hires are the foundation of successful teams. Identify, attract, and recruit
+                the right talent with our advanced recruitment software integration, and elevate the onboarding
+                experience with personalized workflows.</div>
+            <div class="ehir pols">Explore Hiring</div>
+            <div class="onboarding pols">Explore Onboarding</div>
+            <div class="wh">
+                <div class="fir">
+                    <div class="cus">✅Automated hiring</div>
+                    <div class="cus">✅Custom onboarding workflows</div>
+                </div>
+                <br><br>
+                <div class="sec">
+                    <div class="cus">✅Offer letter with e-sign</div>
+                    <div class="cus">✅Onboarding reports</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="secondbox">
+        <div class="in">
+            <div class="core posi">Core HR management</div><br>
+            <div class="boost posi">Boost workplace efficiency with a robust HR system that is highly customizable.
+                Simplify your routine HR processes and effectively manage all your employee information from a single,
+                centralized database.</div><br>
+            <div class="exbutton posi">Explore Core HR</div>
+            <div class="do">
+                <div>
+                    <div class="dl1">✅Employee management</div>
+                    <br>
+                    <div class="dl2">✅Document management</div>
+                </div>
+                <div class="do2">
+                    <div class="">✅Time and attendance</div>
+                    <br>
+                    <div>✅HR helpdesk</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="img3"></div>
+    </div>
+</body>
+</html>

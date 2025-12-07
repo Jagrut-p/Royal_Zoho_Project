@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+    .flexer {
+        display: flex;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+    }
+    .box {
+        border: 1px solid red;
+        padding: 10px;
+        height: 10px;
+        width: 80px;
+        color: red;
+        font-size: 19px;
+        justify-content: center;
+        text-align: center;
+        justify-self: center;
+        justify-items: center;
+        align-content: center;
+        align-self: center;
+    }
+
+    .box:hover {
+        background-color: red;
+        color: white;
+    }
+
+    .pasd {
+        margin-right: 5px;
+        color: red;
+        font-size: 20px;
+        /* left: 1200px;
+        bottom: 150px;
+        position: relative; */
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .te {
+        font-size: 36px;
+        position: relative;
+        left: 10%;
+        font-family: sans-serif;
+        font-size: 54px;
+        font-weight: 400;
+    }
+
+    .dot {
+        text-decoration-line: dotted;
+        text-decoration-style: dotted;
+        text-underline-offset: 4px;
+    }
+
+    hr {
+        background-color: red;
+        height: 3px;
+        width: 80px;
+
+    }
+
+    .sp {
+        font-size: 24px;
+        position: relative;
+        left: 10%;
+        width: 100%;
+        font-size: 24px;
+        line-height: 38px; 
+        font-family: sans-serif;
+        color: rgb(51, 51, 51);
+    }
+
+    .redbox {
+        background-color: rgb(233, 3, 3);
+        position: relative;
+        left: 60px;
+        height: 20px;
+        padding: 6px;
+        text-align: center;
+        color: white;
+        width: 200px;
+        padding-bottom: 12px;
+        padding-top: 12px;
+        font-family: sans-serif;
+        font-size: 17px;
+        line-height: 26px;
+        font-weight: 600;
+    }
+
+    .heade {
+        font-size: 15px;
+    }
+
+    .hs {
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+        left: 30px;
+    }
+
+    .parab {
+        font-size: 18px;
+        font-weight: none;
+    }
+
+    .flexbox {
+        display: flex;
+        background-color: #f8f9fb;
+        height: 1000px;
+        width: 100%;
+        padding-top: 80px;
+        border: 1px solid black;
+    }
+
+    .img1 {
+        width: 1100px;
+        height: 300px;
+    }
+
+    .bigimg {
+        background-image: url(./zh-homev2-banner-india-3.webp);
+        background-size: cover;
+        background-position: bottom;
+        height: 300px;
+        max-width: 100%;
+        width: 100%;
+        position: absolute;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        display: block;
+        top: 530px;
+        right: 18%;
+    }
+
+    .crm {
+        display: flex;
+        background-color: white;
+        position: relative;
+        height: 65%;
+        left: 21%;
+        width: 30%;
+        justify-content: center;
+        position: relative;
+        top: 70px;
+        font-family: sans-serif;
+        font-size: 13px;
+        flex-direction: column;
+    }
+
+    .yellow {
+        background-color: gold;
+        height: 450px;
+        width: 100%;
+    }
+
+    .all {
+        font-size: 20px;
+        position: relative;
+        top: 20px;
+        left: 180px;
+    }
+
+    .one {
+        font-size: 50px;
+        position: relative;
+        left: 180px;
+        top: 20px;
+    }
+
+    .fo {
+        position: relative;
+        left: 180px;
+        top: 20px;
+        font-size: 18px;
+        color: rgb(51, 51, 52);
+        font-weight: 500;
+        line-height: 31px;
+        width: 70%;
+    }
+
+    .redbox {
+        background-color: red;
+        color: white;
+        height: 30px;
+        width: 40%;
+        text-align: center;
+        align-self: center;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    .redbox2 {
+        background-color: red;
+        width: 30%;
+        text-align: center;
+        color: white;
+        position: relative;
+        align-content: center;
+        left: 27%;
+        height: 10%;
+        font-weight: bold;
+    }
+
+    .looog {
+        background-image: url(./Screenshot\ \(1644\).png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 20%;
+        width: 100px;
+        left: 10%;
+        position: relative;
+        bottom: 0px;
+        top: 90px;
+
+    }
+
+    .fonr {
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 34px;
+        width: 65%;
+        position: relative;
+        left: 20%;
+        margin: 0;
+        padding: 0;
+        top: 125px;
+    }
+
+    .pic {
+        position: relative;
+        top: 110px;
+        background-image: url(./zh-video-poster-prakash\ \(1\).png);
+        background-size: 80%;
+        height: 100px;
+        width: 100px;
+        background-repeat: no-repeat;
+    }
+
+    .po {
+        position: relative;
+        left: 20%;
+    }
+
+    .cap {
+        font-size: 20px;
+        position: relative;
+        top: 180px;
+        margin: 0;
+        padding: 0;
+
+        left: 110px;
+    }
+
+    .ceo {
+        font-size: 15px;
+        position: relative;
+        top: 185px;
+        left: 110px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .white {
+        background-color: #f8f9fb;
+        width: 100%;
+        height: 520px;
+
+    }
+
+    .brand1 {
+        position: relative;
+        left: 560px;
+        top: 40px;
+        width: 15%;
+    }
+
+    .iifl {
+        background-image: url(./iifl.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+
+    }
+
+    .spicejet {
+        background-image: url(./spicejet.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+    }
+
+    .loreal {
+        background-image: url(./loreal.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        /* left: 590px;
+        margin: 0;
+        padding: 0;
+        bottom: 100px; */
+    }
+
+    .amazon {
+        /* position: relative; */
+        background-image: url(./amazon.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        /* left: 820px;
+        bottom: 165px;
+        margin: 0;
+        padding: 0; */
+
+    }
+
+    .tata {
+        /* position: relative; */
+        background-image: url(./tata-play.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        /* left: 1040px;
+        margin: 0;
+        padding: 0;
+        bottom: 230px; */
+    }
+
+    .zomato {
+        /* position: relative; */
+        background-image: url(./zomato.png);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        /* margin: 0;
+        padding: 0;
+        left: 500px;
+        bottom: 165px; */
+    }
+
+    .cut {
+        color: blue;
+        position: relative;
+        top: 20%;
+        left: 45%;
+        font-weight: 600;
+    }
+
+    .max {
+        position: relative;
+        background-image: url(./max-life-insurance.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        /* left: 820px;
+        bottom: 250px;
+        margin: 0;
+        padding: 0; */
+    }
+
+    .ai {
+        background-color: white;
+    }
+
+    .asphoto {
+        background-image: url(./log.png);
+        width: 300px;
+        height: 400px;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
+
+    .cir {
+        background-image: url(./zohologo.jpeg);
+        width: 100px;
+        height: 48px;
+        background-size: 110%;
+        /* position: relative;
+        left: 15px;
+        top: 15px; */
+        background-repeat: no-repeat;
+    }
+
+    .naba {
+        /* position: relative;
+        left: 220px;
+        bottom: 20px; */
+        font-size: 20px;
+        /* border: 2px solid black; */
+        width: 6%;
+    }
+
+    .ent {
+        /* position: relative;
+        left: 350px; */
+        font-size: 20px;
+        /* bottom: 43px; */
+        /* border: 2px solid black; */
+        width: 8%;
+    }
+
+    .cus {
+        /* position: relative;
+        left: 490px;
+        bottom: 63px; */
+        font-size: 20px;
+        /* border: 2px solid black; */
+        width: 8%;
+    }
+
+    .par {
+        /* position: relative;
+        left: 630px;
+        bottom: 83px; */
+        font-size: 20px;
+        /* border: 2px solid black; */
+        width: 8%;
+    }
+
+    .res {
+        /* position: relative;
+        left: 750px;
+        bottom: 103px; */
+        font-size: 20px;
+        /* border: 2px solid black; */
+        width: 8%;
+    }
+
+    .mai {
+        background-color: white;
+        background-size: auto;
+        height: 80px;
+        position: fixed;
+        z-index: 1000;
+        /* border: 1px solid red; */
+        width: 100%;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .hra {
+        position: relative;
+        right: 35%;
+        width: 50px;
+        height: 2px;
+    }
+
+    .cimg {
+        background-image: url(./crm.png);
+        background-size: 50px;
+        height: 40px;
+        width: 50px;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 40px;
+    }
+
+    .emimg {
+        background-image: url(./email.png);
+        background-size: 50px;
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        position: relative;
+
+    }
+
+    .boimg {
+        background-image: url(./books.png);
+        background-size: 50px;
+        height: 40px;
+        width: 50px;
+        background-repeat: no-repeat;
+    }
+
+    .peimg {
+        background-image: url(./peopleindex.png);
+        background-size: 60px;
+        height: 50px;
+        width: 60px;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+    }
+
+    .deimg {
+        background-image: url(./projects.png);
+        background-size: 40px;
+        height: 30px;
+        width: 40px;
+        background-repeat: no-repeat;
+    }
+
+    .primg {
+        background-image: url(./projects.png);
+        background-size: 40px;
+        height: 30px;
+        width: 40px;
+        background-repeat: no-repeat;
+    }
+
+    .cfont {
+        position: relative;
+        left: 80px;
+        font-size: 27px;
+        /* border: 1px solid black; */
+        width: 20%;
+    }
+
+    .commp {
+        position: relative;
+        left: 80px;
+        font-size: 17px;
+        /* border: 1px solid black; */
+        width: 60%;
+    }
+
+    .mfont {
+        position: relative;
+        left: 80px;
+        font-size: 27px;
+        bottom: 40px;
+        text-decoration: none;
+        color: black;
+        /* border: 1px solid black; */
+        width: 20%;
+    }
+
+    .mpfont {
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+        /* border: 1px solid black; */
+        width: 60%;
+    }
+
+    .bfont {
+        font-size: 27px;
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+        /* border: 1px solid black; */
+        width: 20%;
+    }
+
+    a {
+        text-decoration: none;
+        border: 1px solid red;
+    }
+
+    .bpfont {
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+        font-size: 17px;
+        /* border: 1px solid black; */
+        width: 60%;
+    }
+
+    .pfont {
+        font-size: 27px;
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+        width: 25%;
+        border: 1px solid black;
+    }
+
+    .ppfont {
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+        font-size: 17px;
+        width: 60%;
+        border: 1px solid black;
+    }
+
+    .entlink {
+        text-decoration: none;
+        color: black;
+    }
+
+    .video1 {
+        background-image: url(./Screenshot\ \(1649\).png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 1200px;
+        height: 288px;
+        position: relative;
+        bottom: 150px;
+        left: 80px;
+        border: 1px solid black;
+    }
+
+    .vit {
+        background-color: white;
+    }
+
+    .ye {
+        background-color: gold;
+        height: 100px;
+    }
+
+    .a{
+        border: 1px solid black;
+        height: 300px;
+    }
+
+    .fe {
+        position: relative;
+        left: 15%;
+        top: 15%;
+        font-weight: 600;
+        width: 30%;
+    }
+
+    .image1 {
+        position: relative;
+        left: 5%;
+    }
+
+    .texte {
+        position: relative;
+        left: 100px;
+    }
+
+    .fot {
+        position: relative;
+        left: 180px;
+        top: 20px;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 31px;
+    }
+
+    .fote {
+        position: relative;
+        left: 180px;
+        top: 20px;
+        font-size: 18px;
+        color: rgb(1, 1, 1);
+        font-weight: 500;
+        line-height: 31px;
+    }
+
+    .pot {
+        left: 40%;
+    }
+
+    .setim {
+        display: flex;
+        position: relative;
+        top: 40px;
+        left: 11%;
+        width: 80%;
+        height: 20%;
+        gap: 5%;
+        align-items: center;
+    }
+
+    .set {
+        top: 10%;
+        gap: 5%;
+        display: flex;
+        position: relative;
+        left: 35%;
+        width: 25%;
+        align-items: center;
+    }
+    .flexe1{
+        display: flex;
+        position: relative;
+        gap: 1%;
+        text-align: center;
+        align-items: center;
+        top: 13%;
+    }
+    .right1{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 80%;
+        border: 1px solid black;
+        width: 15%;
+        bottom: 35%;
+        justify-content: center;
+    }
+    .peopleimg{
+        background-image: url(./peopleindex.png);
+        background-size: 100%;
+        height: 40px;
+        width: 10%;
+        border: 1px solid black;
+    }
+    .peoplefont1{
+        font-size: 24px;
+        font-family: sans-serif;
+        border: 1px solid black;
+        position: relative;
+        bottom: 30%;
+        width: 25%;
+    }
+    .peoplefont2{
+        font-size: 17px;
+        font-family: sans-serif;
+        border: 1px solid black;
+        width: 60%;
+        bottom: 30%;
+    }
+</style>
+
+<body>
+    <div class="mai">
+        <div class="flexe1">
+        <div class="cir"></div>
+        <div class="naba">Products</div>
+        <div class="ent"><a class="entlink" href="enterprise.html">Enterprise</a></div>
+        <div class="cus">Customers</div>
+        <div class="par">Partner</div>
+        <div class="res">Resources</div>
+        </div>
+        <div class="right1">
+        <div class="so">🔎</div>
+        <div class="pasd">Sign In</div>
+        <div class="box">Sign Up</div>
+        </div>
+    </div>
+    </div>
+    <!-- your life -->
+    <div class="flexbox">
+        <div>
+            <p class="te">Your life's work, <br>powered by our life's work</p>
+            <div class="">
+                <hr class="hra">
+                <p class="sp">A unique and powerful software suite to transform the way <br> you work. Designed for
+                    businesses
+                    of all sizes, built by a <br> company that <u class="dot">values your privacy.</u></p>
+            </div>
+            <div class="redbox">
+                GET STARTED FOR FREE
+            </div>
+        </div>
+        <!-- your life div end -->
+        <!-- crm -->
+        <div class="crm">
+            <div>
+                <div class="fe image1">FEATURED APPS</div>
+                <div class="cimg image1"></div>
+                <div class="cfont texte">CRM</div>
+                <div class="commp texte">Comprehensive CRM platform <br> for customer-faceing</div>
+            </div>
+            <div>
+                <a href="mail.html">
+                    <div class="emimg image1"></div>
+                    <div class="mfont texte">MAIL</div>
+                    <div class="mpfont texte">Secure email service for team <br>of all size.</div>
+                </a>
+            </div>
+            <div>
+                <div class="boimg image1"></div>
+                <div class="bfont texte">Books</div>
+                <div class="bpfont texte">Powerful accounting platform <br> for growing businesses</div>
+            </div>
+            <div class="">
+                <a href="index.html">
+                <div class="peopleimg image1"></div>
+                <div class="peoplefont1 texte">People</div>
+                <div class="peoplefont2 texte">Organize, automate, and simplify your HR processes.</div>
+            </a>
+            </div>
+                <div>
+                    <div class="primg image1"></div>
+                    <div class="pfont texte">Project</div>
+                    <div class="ppfont texte">Helpdesk software to deliver <br> great customer support.</div>
+                </div>
+            </div>
+        </div>
+        <div class="bigimg"></div>
+        <!-- crm div end-->
+    </div>
+    <div class="vit">
+        <div class="ye">
+            <div class="video1"> </div>
+        </div>
+
+    </div>
+    <div class="flexer">
+        <div class="yellow">
+            <div class="looog"></div>
+            <div class="fot">All-in-one suite</div>
+            <div class="one">Zoho One</div>
+            <div class="fote">The operating system for business</div>
+            <div class="fo">Run your entire business on Zoho with our unified cloud <br> software, designed to help
+                you break down silos between <br> departments and increase organizational efficiency.</div>
+            <br><br><br>
+            <div class="redbox2">TRY ZOHO ONE</div>
+        </div>
+        <div class="yellow">
+            <div class="fonr">
+                "You can be a startup, mid-sized <br> company, or an enterprise—Zoho One <br> is a boon for all."
+            </div>
+            <div class="cap pot">Prakarsh Gagdani</div>
+            <div class="ceo pot">CEO, 5paisa.com (an IIFL subsidiary)</div>
+            <div class="pic po">
+
+            </div>
+        </div>
+    </div><!-- end of flex yellow -->
+    <div class="white">
+        <div class="brand1">BRANDS THAT TRUST US</div>
+        <hr size="1px">
+        <div class="setim">
+            <div class="iifl"></div>
+            <div class="spicejet"></div>
+            <div class="loreal"></div>
+            <div class="amazon"></div>
+            <div class="tata"></div>
+        </div><!--setim end -->
+        <div class="set">
+            <div class="zomato"></div>
+            <div class="max"></div>
+        </div> <!-- set end -->
+        <div class="cut">
+            <div>CUSTOMER STORIES ></div>
+        </div>
+    </div><!--white end -->
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+    .flexer {
+        display: flex;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+    }
+
+    li {
+        padding-left: 55px;
+        padding-bottom: 8px;
+        padding-top: 10px;
+        /* font-size: 30px; */
+    }
+
+    .so {
+        padding-left: 350px;
+        position: relative;
+        bottom: 130px;
+        left: 40pc;
+    }
+
+    .box {
+        border: 1px solid red;
+        padding: 10px;
+        margin: 20px;
+        width: 80px;
+        position: relative;
+        left: 1050px;
+        bottom: 200px;
+        color: red;
+        font-size: 19px;
+    }
+
+    .box:hover {
+        background-color: red;
+        color: white;
+    }
+
+    .pasd {
+        margin-right: 5px;
+        color: red;
+        font-size: 20px;
+        left: 1200px;
+        bottom: 150px;
+        position: relative;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .te {
+        font-size: 36px;
+        margin: 60px;
+    }
+
+    .dot {
+        text-decoration: dotted;
+    }
+
+    hr {
+        background-color: red;
+        height: 3px;
+        width: 80px;
+
+    }
+
+    .sp {
+        font-size: 24px;
+        margin: 60px;
+    }
+
+    .redbox {
+        background-color: rgb(233, 3, 3);
+        position: relative;
+        left: 60px;
+        bottom: 30px;
+        height: 20px;
+        padding: 6px;
+        justify-content: center;
+        color: white;
+        width: 200px;
+        padding-bottom: 12px;
+        padding-top: 12px;
+
+    }
+
+    .heade {
+        font-size: 15px;
+    }
+
+    .hs {
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+        left: 30px;
+    }
+
+    .parab {
+        font-size: 18px;
+        font-weight: none;
+    }
+
+    .flexbox {
+        display: flex;
+        background-color: #f8f9fb;
+        height: 1000px;
+        width: 100%;
+        padding-top: 80px;
+    }
+
+    .img1 {
+        width: 1100px;
+        height: 300px;
+    }
+
+    .bigimg {
+        background-image: url(./zh-homev2-banner-india-3.webp);
+        background-size: cover;
+        background-position: bottom;
+        height: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        width: 85%;
+        position: absolute;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        display: block;
+        top: 530px;
+        right: 280px;
+    }
+
+    .crm {
+        display: flex;
+        background-color: white;
+        position: relative;
+        left: 130px;
+        height: 500px;
+        width: 23%;
+        margin-left: 80px;
+        padding: 45px;
+        position: relative;
+        top: 70px;
+        flex-direction: column;
+    }
+
+    .yellow {
+        background-color: gold;
+        height: 450px;
+        width: 100%;
+    }
+
+    .all {
+        font-size: 20px;
+        position: relative;
+        top: 20px;
+        left: 180px;
+    }
+
+    .one {
+        font-size: 50px;
+        position: relative;
+        left: 180px;
+        top: 20px;
+    }
+
+    .fo {
+        position: relative;
+        left: 180px;
+        top: 20px;
+    }
+
+    .redbo {
+        background-color: red;
+        color: white;
+        height: 30px;
+        width: 150px;
+        padding: 10px;
+        margin-left: 180px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        border: 1px solid black;
+    }
+
+    .looog {
+        position: relative;
+        left: 120px;
+        bottom: 0px;
+        top: 70px;
+
+    }
+
+    .fonr {
+        font-size: 25px;
+        position: relative;
+        left: 10px;
+        margin: 0;
+        padding: 0;
+        top: 125px;
+    }
+
+    .pic {
+        position: relative;
+        top: 160px;
+        background-image: url(./zh-video-poster-prakash\ \(1\).png);
+        background-size: 80%;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        background-repeat: no-repeat;
+    }
+
+    .cap {
+        font-size: 20px;
+        position: relative;
+        top: 200px;
+        margin: 0;
+        padding: 0;
+
+        left: 110px;
+    }
+
+    .ceo {
+        font-size: 15px;
+        position: relative;
+        top: 205px;
+        left: 110px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .white {
+        background-color: #f8f9fb;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .brand {
+        position: relative;
+        left: 560px;
+        top: 40px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .iifl {
+        position: relative;
+        background-image: url(./iifl.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        left: 110px;
+        top: 40px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .spicejet {
+        position: relative;
+        background-image: url(./spicejet.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        left: 350px;
+        margin: 0;
+        padding: 0;
+        bottom: 35px;
+    }
+
+    .loreal {
+        position: relative;
+        background-image: url(./loreal.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        left: 590px;
+        margin: 0;
+        padding: 0;
+        bottom: 100px;
+    }
+
+    .amazon {
+        position: relative;
+        background-image: url(./amazon.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        left: 820px;
+        bottom: 165px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .tata {
+        position: relative;
+        background-image: url(./tata-play.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        left: 1040px;
+        margin: 0;
+        padding: 0;
+        bottom: 230px;
+    }
+
+    .zomato {
+        position: relative;
+        background-image: url(./zomato.png);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        margin: 0;
+        padding: 0;
+
+        width: 150px;
+        left: 500px;
+        bottom: 165px;
+    }
+
+    .cut {
+        color: blue;
+        position: relative;
+        left: 600px;
+        bottom: 180px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .max {
+        position: relative;
+        background-image: url(./max-life-insurance.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 70px;
+        width: 150px;
+        left: 820px;
+        bottom: 250px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ai {
+        background-color: white;
+    }
+
+    .asphoto {
+        background-image: url(./log.png);
+        width: 300px;
+        height: 400px;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
+
+    .cir {
+        background-image: url(./zohologo.jpeg);
+        width: 300px;
+        height: 50px;
+        background-size: 45%;
+        position: relative;
+        left: 15px;
+        top: 15px;
+        background-repeat: no-repeat;
+    }
+
+    .naba {
+        position: relative;
+        left: 220px;
+        bottom: 20px;
+        font-size: 20px;
+    }
+
+    .ent {
+        position: relative;
+        left: 350px;
+        font-size: 20px;
+        bottom: 43px;
+    }
+
+    .cus {
+        position: relative;
+        left: 490px;
+        bottom: 63px;
+        font-size: 20px;
+    }
+
+    .par {
+        position: relative;
+        left: 630px;
+        bottom: 83px;
+        font-size: 20px;
+    }
+
+    .res {
+        position: relative;
+        left: 750px;
+        bottom: 103px;
+        font-size: 20px;
+    }
+
+    .mai {
+        background-color: white;
+        background-size: auto;
+        height: 80px;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .hra {
+        position: relative;
+        right: 250px;
+        width: 50px;
+        height: 2px;
+    }
+
+    .cimg {
+        background-image: url(./crm.png);
+        background-size: 50px;
+        height: 40px;
+        width: 50px;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 40px;
+    }
+
+    .emimg {
+        background-image: url(./email.png);
+        background-size: 50px;
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        position: relative;
+
+    }
+
+    .boimg {
+        background-image: url(./books.png);
+        background-size: 50px;
+        height: 40px;
+        width: 50px;
+        background-repeat: no-repeat;
+    }
+
+    .peimg {
+        background-image: url(./peopleindex.png);
+        background-size: 60px;
+        height: 50px;
+        width: 60px;
+        background-repeat: no-repeat;
+    }
+
+    .deimg {
+        background-image: url(./projects.png);
+        background-size: 40px;
+        height: 30px;
+        width: 40px;
+        background-repeat: no-repeat;
+    }
+
+    .primg {
+        background-image: url(./projects.png);
+        background-size: 40px;
+        height: 30px;
+        width: 40px;
+        background-repeat: no-repeat;
+    }
+
+    .cfont {
+        position: relative;
+        left: 80px;
+        font-size: 27px;
+    }
+
+    .commp {
+        position: relative;
+        left: 80px;
+    }
+
+    .mfont {
+        position: relative;
+        left: 80px;
+        font-size: 27px;
+        bottom: 40px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .mpfont {
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .bfont {
+        font-size: 27px;
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .bpfont {
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+    }
+
+    .pfont {
+        font-size: 27px;
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+    }
+
+    .ppfont {
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+    }
+
+    .entlink {
+        text-decoration: none;
+        color: black;
+    }
+
+    .video1 {
+        background-image: url(./Screenshot\ \(1649\).png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        width: 1500px;
+        height: 288px;
+        position: relative;
+        bottom: 150px;
+        left: 80px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .vit {
+        background-color: white;
+    }
+
+    .ye {
+        background-color: gold;
+        height: 100px;
+    }
+    a{
+        color: black;
+    }
+
+</style>
+
+<body>
+    <div class="mai">
+        <div class="cir"></div>
+        <div class="naba">Products</div>
+        <div class="ent"><a class="entlink" href="enterprise.html">Enterprise</a></div>
+        <div class="cus">Customers</div>
+        <div class="par">Partner</div>
+        <div class="res">Resources</div>
+        <div class="so">🔎</div>
+        <div class="pasd">Sign In</div>
+        <div class="box">Sign Up</div>
+    </div>
+    </div>
+    <!-- your life -->
+    <div class="flexbox">
+        <div>
+            <p class="te">Your life's work, <br>powered by our life's work</p>
+            <div class="">
+                <hr class="hra">
+                <p class="sp">A unique and powerful software suite to transform the way <br> you work. Designed for
+                    businesses
+                    of all sizes, built by a <br> company that <u class="dot">values your privacy.</u></p>
+            </div>
+            <div class="redbox">
+                GET STARTED FOR FREE
+            </div>
+        </div>
+        <!-- your life div end -->
+        <!-- crm -->
+        <div class="crm">
+            <div>
+                <div class="fe">FEATURED APPS</div>
+                <div class="cimg"></div>
+                <div class="cfont">CRM</div>
+                <div class="commp">Comprehensive CRM platform <br> for customer-faceing</div>
+            </div>
+            <div>
+                <a href="mail.html">
+                    <div class="emimg"></div>
+                    <div class="mfont">MAIL</div>
+                    <div class="mpfont">Secure email service for team <br>of all size.</div>
+                </a>
+            </div>
+            <div>
+                <div class="boimg"></div>
+                <div class="bfont">Books</div>
+                <div class="bpfont">Powerful accounting platform <br> for growing businesses</div>
+            </div>
+            <div>
+                <a href="hr.html">
+                    <div class="peimg"></div>
+                    <div class="pfont">People</div>
+                    <div class="ppfont">Orgranise, automate and <br> simplify your HR process.</div>
+                </a>
+                <div>
+                    <div class="primg"></div>
+                    <div class="pfont">Project</div>
+                    <div class="ppfont">Helpdesk software to deliver <br> great customer support.</div>
+                </div>
+            </div>
+        </div>
+        <div class="bigimg"></div>
+        <!-- crm div end-->
+    </div>
+    <div class="vit">
+        <div class="ye">
+            <div class="video1"> </div>
+        </div>
+
+    </div>
+    <div class="flexer">
+        <div class="yellow">
+            <div class="looog"><img src="./Screenshot (1644).png" alt=""></div>
+            <div class="fo">All-in-one suite</div>
+            <div class="one">Zoho One</div>
+            <div class="fo">The operating system for business</div>
+            <div class="fo">Run your entire business on Zoho with our unified cloud <br> software, designed to help
+                you break down silos between <br> departments and increase organizational efficiency.</div>
+            <br><br><br>
+            <div class="redbo">Try zoho one</div>
+        </div>
+        <div class="yellow">
+            <div class="fonr">
+                "You can be a startup, mid-sized <br> company, or an enterprise—Zoho One <br> is a boon for all."
+            </div>
+            <div class="cap">Prakarsh Gagdani</div>
+            <div class="ceo">CEO, 5paisa.com (an IIFL subsidiary)</div>
+            <div class="pic">
+
+            </div>
+        </div>
+    </div><!-- end of flex yellow -->
+    <div class="white">
+        <div class="brand">BRANDS THAT TRUST US
+        </div>
+        <hr size="1px">
+        <div class="iifl"></div>
+        <div class="spicejet"></div>
+        <div class="loreal"></div>
+        <div class="amazon"></div>
+        <div class="tata"></div>
+        <div class="zomato"></div>
+        <div class="max"></div>
+        <div class="cut">CUSTOMER STORIES ></div>
+    </div>
+</body>
+
+</html>
