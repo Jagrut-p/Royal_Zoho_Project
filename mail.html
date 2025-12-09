@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-            .nav1 {
-                color: blue;
-                width: 200%;
-                height: auto;
-            }
-            .half{
-                width: 1550px;
-                height: 700px;
-            }
-            .whitebackground{
-                width: 100%;
-                height: 759px;
-                border: 10px solid black;
-            }
+        .nav1 {
+            color: blue;
+            width: 200%;
+            height: auto;
+        }
+
+        .half {
+            width: 1550px;
+            height: 700px;
+        }
+
+        .whitebackground {
+            width: 100%;
+            height: 759px;
+        }
 
         body {
             margin: 0;
@@ -34,7 +35,8 @@
             height: 50px;
             width: 100px;
             position: relative;
-            left: 10px;
+            left: 20px;
+            top: 10px;
         }
 
         .nav1 {
@@ -64,7 +66,10 @@
             background-repeat: no-repeat;
             background-size: 35%;
             height: 150px;
-            width: 20%;
+            width: 21%;
+            position: relative;
+            left: 70px;
+            top: 20px;
         }
 
         .but {
@@ -123,7 +128,7 @@
             height: 660px;
             width: 100%;
             position: relative;
-            top: 10%;
+            bottom: 100px;
         }
 
         .socialmedia {
@@ -216,20 +221,40 @@
             line-height: 26px;
             font-weight: 500;
         }
+
+        .nav12 {
+            height: 70px;
+            align-content: center;
+            text-align: center;
+            width: 89px;
+            position: relative;
+            left: 35px;
+        }
+
+        .navflex1 {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
     </style>
 </head>
 
 <body>
-    <div class="nav1"> 
-        <a href="index.html"><div class="cir"></div></a>
-        <div class="work">Workplace</div>
-        <div class="book">Books</div>
-        <div class="tab">Tables</div>
-        <div class="pay">Payroll</div>
-        <div class="team">TeamInBox</div>
-        <div class="zep">ZeptoMail</div>
-        <div class="pro">All Products</div>
+    <div class="mai">
+        <div class="navflex1">
+          <a href="index.html"><div class="cir"></div></a>
+            <div class="nav12">Workplace</div>
+            <div class="nav12">Books</div>
+            <div class="nav12">Tables</div>
+            <div class="nav12">Payroll</div>
+            <div class="nav12">TeamInBox</div>
+            <div class="nav12">ZeptoMail</div>
+            <div class="nav12">All Products</div>
+
+        </div>
     </div>
+    </div>
+
     <div class="background">
         <div class="nav2">
             <div class="mail"></div>
